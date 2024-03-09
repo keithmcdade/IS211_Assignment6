@@ -86,39 +86,39 @@ class TempConversionValues(unittest.TestCase):
                                    }
                         }
 
-    def test_celsius_to_kelvin_conversion_cr(self):
+    def test_celsius_to_kelvin_conversion(self):
         for val, res in self.test_values_c_to_k:
-            conv_c_to_k_res = cr.ConvRef().convert('celsius', 'kelvin', val)
+            conv_c_to_k_res = conversion.convert_celsius_to_kelvin(val)
             self.assertEqual(res, conv_c_to_k_res)
-            print(f"conversions_refactored.py test for converting {val} celsius to {res:.2f} kelvin passed")
+            print(f"Test for converting {val} celsius to {res:.2f} kelvin passed")
 
-    def test_celsius_to_fahrenheit_conversion_cr(self):
+    def test_celsius_to_fahrenheit_conversion(self):
         for val, res, in self.test_values_c_to_f:
-            conv_c_to_f_res = cr.ConvRef().convert('celsius', 'fahrenheit', val)
+            conv_c_to_f_res = conversion.convert_celsius_to_fahrenheit(val)
             self.assertEqual(res, conv_c_to_f_res)
-            print(f"conversions_refactored.py test for converting {val} celsius to {res:.2f} fahrenheit passed")
+            print(f"Test for converting {val} celsius to {res:.2f} fahrenheit passed")
 
-    def test_fahrenheit_to_celsius_conversion_cr(self):
+    def test_fahrenheit_to_celsius_conversion(self):
         for val, res, in self.test_values_f_to_c:
-            conv_f_to_c_res = cr.ConvRef().convert('fahrenheit', 'celsius', val)
+            conv_f_to_c_res = conversion.convert_fahrenheit_to_celsius(val)
             self.assertEqual(res, conv_f_to_c_res)
-            print(f"conversions_refactored.py test for converting {val} fahrenheit to {res:.2f} celsius passed")
+            print(f"Test for converting {val} fahrenheit to {res:.2f} celsius passed")
 
-    def test_fahrenheit_to_kelvin_conversion_cr(self):
+    def test_fahrenheit_to_kelvin_conversion(self):
         for val, res, in self.test_values_f_to_k:
-            conv_f_to_k_res = cr.ConvRef().convert('fahrenheit', 'kelvin', val)
+            conv_f_to_k_res = conversion.convert_fahrenheit_to_kelvin(val)
             self.assertEqual(res, conv_f_to_k_res)
-            print(f"conversions_refactored.py test for converting {val} fahrenheit to {res:.2f} kelvin passed")
+            print(f"Test for converting {val} fahrenheit to {res:.2f} kelvin passed")
 
-    def test_kelvin_to_celsius_conversion_cr(self):
+    def test_kelvin_to_celsius_conversion(self):
         for val, res, in self.test_values_k_to_c:
-            conv_k_to_c_res = cr.ConvRef().convert('kelvin', 'celsius', val)
+            conv_k_to_c_res = conversion.convert_kelvin_to_celsius(val)
             self.assertEqual(res, conv_k_to_c_res)
-            print(f"conversions_refactored.py test for converting {val} kelvin to {res:.2f} celsius passed")
+            print(f"Test for converting {val} kelvin to {res:.2f} celsius passed")
 
-    def test_kelvin_to_fahrenheit_conversion_cr(self):
+    def test_kelvin_to_fahrenheit_conversion(self):
         for val, res, in self.test_values_k_to_f:
-            conv_k_to_f_res = cr.ConvRef().convert('kelvin', 'fahrenheit', val)
+            conv_k_to_f_res = conversion.convert_kelvin_to_fahrenheit(val)
             self.assertEqual(res, conv_k_to_f_res)
             print(f"Test for converting {val} kelvin to {res:.2f} fahrenheit passed")
 
